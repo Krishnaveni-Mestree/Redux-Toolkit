@@ -1,12 +1,16 @@
 const configureStore=require('@reduxjs/toolkit').configureStore;
+const reduxLogger=require('redux-logger');
+
 const pizzaReducer=require('../features/pizza/pizzaSlice');
 const burgerReducer=require('../features/burger/burgerSlice')
+const logger=reduxLogger.createLogger();
 
 const store=configureStore({
     reducer:{
         pizza:pizzaReducer,
         burger:burgerReducer
-    }
+    },
+    middleware:(getDefaultMiddleware)=>getDefaultMiddleware().concat(logger)  
 });
 
 module.exports=store;
