@@ -16,4 +16,4 @@ const pizzaSlice=createSlice({
 console.log(pizzaSlice);
 
 module.exports=pizzaSlice.reducer;  //default export
-module.exports.pizzaActions=pizzaSlice.actions;
+module.exports.pizzaActions=pizzaSlice.actions; //named export
