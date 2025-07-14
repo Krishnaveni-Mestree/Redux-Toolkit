@@ -5,7 +5,7 @@ const burgerActions=require('./features/burger/burgerSlice').burgerActions;
 console.log('Initial State',store.getState());
 
 const unsubscribe=store.subscribe(()=>{
-    console.log('Update State',store.getState());
+    //console.log('Update State',store.getState());
 });
 
 store.dispatch(pizzaActions.pizza_order());
